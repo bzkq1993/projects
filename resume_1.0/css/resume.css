@@ -1,0 +1,480 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #999999;
+}
+
+.pageCont {
+	width: 100%;
+	height: 100%;
+}
+
+.pageOne {
+	background: url(../img/f1.gif)no-repeat center;
+	background-size: 113%;
+}
+
+.prc1 {
+	position: absolute;
+	width: 77%;
+	height: 15%;
+	top: 13%;
+	left: 45%;
+}
+
+.prc2 {
+	position: absolute;
+	width: 90%;
+	height: 49%;
+	top: 25%;
+	left: 10%;
+}
+
+.prc3 {
+	position: absolute;
+	width: 80%;
+	height: 30%;
+	top: 32%;
+	left: 15%;
+}
+
+.prc4 {
+	position: absolute;
+	width: 77%;
+	height: 15%;
+	top: 73%;
+	left: 12%;
+}
+
+.prc5 {
+	position: absolute;
+	width: 10%;
+	height: 4%;
+	font-size: 20px;
+	top: 95%;
+	left: 48%;
+	color: white;
+}
+
+.pageTwo {
+	background-color: #252424;
+}
+
+.tLeft {
+	width: 50%;
+	height: 100%;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tLeft .tx {
+	width: 70%;
+	height: 20%;
+	margin-top: 43%;
+}
+
+.pageTwo span {
+	display: inline-block;
+	height: 1.4rem;
+	color: #e6e4e4;
+	font-size: 1rem;
+	border-bottom: 1px solid white;
+	margin-left: 1rem;
+}
+
+.pageTwo .sb {
+	border: none;
+	margin-top: 1.5rem;
+}
+
+.tLeft div {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pr {
+	width: 100%;
+	height: 100%;
+	margin-left: 93%;
+}
+
+.pr img:first-child {
+	width: 60%;
+	margin-top: -8%;
+}
+
+.pr img:nth-child(2) {
+	width: 50%;
+	margin-top: -12%;
+}
+
+.pr img:nth-child(3) {
+	width: 40%;
+	margin-top: -3%;
+}
+
+.pr img:nth-child(4) {
+	width: 20%;
+	margin-top: 10%;
+}
+
+.tRight {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+.tRight img {
+	float: left;
+	width: 10%;
+	height: 49%;
+	position: absolute;
+	top: 40%;
+}
+
+.tRight .xx {
+	float: right;
+	width: 90%;
+	height: 60%;
+	margin-top: 132%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.pageThree {
+	background-color: #252424;
+}
+
+.three-s {
+	width: 100%;
+	height: 20%;
+}
+
+.three-l {
+	font-size: 2.5rem;
+	color: white;
+	float: left;
+}
+
+.three-r {
+	float: left;
+	width: 45%;
+	color: #e6e4e4;
+	margin-left: 5px;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.three-r span:first-child {
+	border-bottom: 1px solid #e6e4e4;
+	width: 100%;
+	height: 1.1rem;
+	margin-top: 5px;
+}
+
+.three-x {
+	width: 100%;
+	height: 80%;
+}
+
+.inn {
+	width: 100%;
+	height: 100%;
+	margin-left: 15%;
+	padding-top: 15%;
+}
+
+.x1 {
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.round-l {
+	width: 35%;
+	height: 80%;
+	border-radius: 50%;
+	box-shadow: 0 0 1px 1px white;
+	background-color: #252424;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	font-size: 1rem;
+	z-index: 2;
+	margin-left: -35%;
+}
+
+.round-l span {
+	flex: 1;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.round-r {
+	width: 25%;
+	height: 60%;
+	border-radius: 50%;
+	background-color: #b0afaf;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	margin-left: -0.7rem;
+	font-size: 1rem;
+}
+
+.round-r span {
+	color: white;
+	font-size: 1rem;
+}
+
+.round-l2 {
+	width: 25%;
+	height: 60%;
+	border-radius: 50%;
+	background-color: #b0afaf;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	margin-left: 30%;
+	font-size: 1rem;
+}
+
+.round-l2 span {
+	color: white;
+	font-size: 1rem;
+}
+
+.round-r2 {
+	width: 35%;
+	height: 80%;
+	border-radius: 50%;
+	box-shadow: 0 0 1px 1px white;
+	background-color: #252424;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	font-size: 1rem;
+	z-index: 2;
+	margin-left: -3%;
+}
+
+.round-r2 span {
+	flex: 1;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pageFour {
+	background: #252424;
+}
+
+.four-1 {
+	width: 30%;
+	height: 40%;
+	float: left;
+	color: white;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.four-s {
+	font-size: 2.5rem;
+	color: white;
+}
+
+.four-x {
+	width: 30%;
+	height: 60%;
+	font-size: 0.9rem;
+	color: white;
+}
+
+.four-x span {
+	float: left;
+	width: 100%;
+	height: 7.5rem;
+	display: block;
+	border-left: 1px solid white;
+	margin-left: 89%;
+	padding-left: 5px;
+}
+
+.four-2 {
+	width: 70%;
+	height: 40%;
+	float: left;
+}
+
+.four-2 p:first-child {
+	margin-top: 28%;
+}
+
+.four-2 p {
+	margin-left: 5px;
+	color: white;
+	font-size: 0.8rem;
+}
+
+.four-3 img,
+.four-4 img {
+	z-index: 2;
+	width: 100%;
+	height: 75%;
+}
+
+.four-3 {
+	width: 48%;
+	height: 60%;
+	float: left;
+}
+
+.pc {
+	z-index: 1;
+	color: white;
+	font-size: 1.5rem;
+	margin-left: 20%;
+}
+
+.web {
+	z-index: 1;
+	color: white;
+	font-size: 1.5rem;
+}
+
+.four-4 {
+	width: 47%;
+	height: 60%;
+	float: right;
+}
+
+.pageFive {
+	background-color: #252424;
+}
+
+.ft {
+	width: 100%;
+	height: 25%;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ft span:first-child {
+	font-size: 2.5rem;
+	color: white;
+	margin-top: 10%;
+}
+
+.ft span:nth-child(2) {
+	width: 45%;
+	color: white;
+	height: 1.2rem;
+	border-bottom: 1px solid white;
+	text-align: center;
+}
+
+.ft span:nth-child(3) {
+	width: 30%;
+	height: 1rem;
+	color: white;
+	text-align: center;
+}
+
+.fc {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fc-box {
+	width: 80%;
+	height: 90%;
+	border: 1px solid white;
+}
+
+.fc-box p {
+	color: white;
+	font-size: 0.8rem;
+	margin: 0 8% 8% 10%;
+}
+
+.fc-box p:first-child {
+	margin-top: 10%;
+}
+
+.fb {
+	width: 100%;
+	height: 15%;
+}
+
+.fb-t {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.fb-x {
+	width: 100%;
+	height: 50%;
+	display: flex;
+}
+
+.fb-t img {
+	width: 20%;
+	height: 100%;
+	margin-left: 60%;
+}
+
+.fb-x img {
+	width: 20%;
+	height: 100%;
+	margin-left: -10%;
+	margin-left: 52%;
+	margin-top: -1rem;
+}
+
+.fb-qq {
+	color: white;
+	font-size: 0.8rem;
+	display: inline-block;
+	margin-left: -10%;
+	margin-top: 2%;
+}
+
+.fb-wx {
+	color: white;
+	margin-top: -2%;
+	font-size: 0.8rem;
+}
+
+.pageSix {
+	background-color: brown;
+	margin-top: -6%;
+}
+
+.pageF3 img,
+.pageF4 img {
+	width: 100%;
+	height: 100%;
+}
