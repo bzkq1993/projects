@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!-- SEO  -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<!-- 苹果专用 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 简单移动端适配 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>模板</title>
+		<!-- 图标 -->
+		<link rel="stylesheet" href="icon/iconfont.css">
+
+		<link rel="stylesheet" href="css/common2.css">
+		<style>
+			#show-msg-suc {
+				position: absolute;
+				width: 80%;
+				height: 50px;
+				background: #333333;
+				color: white;
+				top: 50%;
+				margin-left: 10%;
+				border-radius: 10px;
+				opacity: 0.7;
+				text-align: center;
+				line-height: 50px;
+				margin-top: -25px;
+				animation: dispear 2s linear 1s;
+				display: none;
+			}
+			
+			@keyframes dispear {
+				from {
+					opacity: 0.7;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			/* ******* login ******* */
+			
+			.login {
+				display: none;
+			}
+			
+			.register {
+				display: none;
+			}
+			
+			.lg {
+				width: 100%;
+				height: 4rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			
+			section .lg:first-child {
+				margin-top: 2rem;
+			}
+			
+			.lg input {
+				width: 85%;
+				height: 60%;
+				border: 1px solid silver;
+				border-radius: 0.5rem;
+				font-size: 1rem;
+				font-weight: 600;
+				outline: none;
+				padding-left: 0.5rem;
+			}
+			
+			.lg2 {
+				width: 100%;
+				height: 3rem;
+				color: #707070;
+			}
+			
+			.lg2-inp {
+				margin-left: 1.5rem;
+			}
+			
+			.lg2 span a {
+				color: #9d9d9d;
+				font-size: 0.8rem;
+				margin-left: 0.5rem;
+			}
+			
+			.lg3 {
+				width: 85%;
+				height: 60%;
+				color: white;
+				border: none;
+				font-size: 1.3rem;
+				background-color: #e32e65;
+				border-radius: 0.5rem;
+				outline: none;
+			}
+			
+			.btn-reg {
+				width: 15%;
+				height: 70%;
+				margin-right: 0.5rem;
+				margin-top: 0.3rem;
+				color: white;
+				background-color: #e4366b;
+				box-shadow: 0 0 1px #silver;
+				border: 1px solid silver;
+				border-radius: 0.5rem;
+			}
+			
+			.erron {
+				width: 85%;
+				height: 40%;
+				font-size: 0.6rem;
+				color: orangered;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<div>
+					<span class="icon iconfont fl" id="fhX">&#xe705;</span>
+				</div>
+				<div>
+					<span>注册</span>
+				</div>
+				<div>
+					<button class="rBtn reg2 dl">登录</button>
+				</div>
+			</div>
+		</header>
+
+		<section>
+			<div class="lg">
+				<input type="text" id="user_h" value="" placeholder=" &nbsp;账号" />
+				<div class="erron" id="err-lgU"></div>
+			</div>
+			<div class="lg">
+				<input type="password" id="psd" placeholder="&nbsp;密码" />
+				<div class="erron" id="err-lgP"></div>
+			</div>
+			<div class="lg">
+				<input type="password" id="psdc" placeholder="&nbsp;重复密码" />
+				<div class="erron" id="err-lgPc"></div>
+			</div>
+			<div class="lg">
+				<button class="lg3" id="rgt">同意服务协议并注册</button>
+				<div class="erron" id="err-lgB"></div>
+			</div>
+			<div id="show-msg-suc">注册成功</div>
+			<!--<div id="show-msg-err">用户已存在</div>
+	    	<div id="show-msg-err1">密码</div>-->
+		</section>
+		<script src="js/app.js"></script>
+		<script src="js/jquery-1.12.1.js" type="text/javascript"></script>
+
+		<script>
+			/*  *****跳转登录界面***** */
+			$(document).on('click','.dl',function(){
+				$('.change').load('login.html');
+			});
+			
+			$(document).on('click','#fhX',function(){
+				$('.change').load('meXIU.html');
+			})
+//			$('.dl').click(function() {
+//				$('.change').load('login.html');
+//			});
+
+			/*  *****注册***** */
+			$('#rgt').click(function() {
+				var user = $('#user_h').val();
+				var pw = $('#psd').val();
+				$.ajax({
+					type: 'post',
+					url: 'http://datainfo.duapp.com/shopdata/userinfo.php',
+					data: {
+						status: 'register',
+						userID: user,
+						password: pw
+					},
+					success: function(data) {
+						console.log(data);
+
+						/*  *****用户名重名data返回0  data返回2数据库报错***** */
+						if(data == 0) {
+							$('#err-lgB').html("用户名已被注册!");
+						}
+						if(data == 2) {
+							$('#err-lgB').html("注册失败!请重新注册!");
+						}
+
+						if(data == 1 && $('.erron').html()) {
+							console.log(data);
+							//							window.location.href = "login.html";
+							$("#show-msg-suc").show();
+							var timer = setTimeout(function() {
+								window.location.href = "login.html";
+								$("#show-msg-suc").hide();
+							}, 3000)
+						} else {
+							$('#err-lgB').html("请重新填写!!");
+						}
+
+					}
+
+				})
+			});
+
+			/* ******用户框,密码框失去焦点时检测用户名,密码规则***** */
+			$('#user_h').blur(function() {
+				if(checkUserReg()) {
+					checkUserExsited();
+				}
+			});
+
+			$('#psd').blur(function() {
+				checkPwReg();
+			});
+
+			$('#psdc').blur(function() {
+				checkPwConfirm();
+			});
+
+			/* ******用户框,密码框获取焦点时清除用户名,密码的erron提示***** */
+			$('#user_h').focus(function() {
+				$('#user_h').val('');
+				$('#err-lgU').html('');
+
+			});
+
+			$('#psd').focus(function() {
+				$('#psd').val('');
+				$('#err-lgP').html('');
+
+			});
+			$('#psdc').focus(function() {
+				$('#psdc').val('');
+				$('#err-lgPc').html('');
+
+			});
+
+			/* ******检测用户名规则***** */
+			function checkUserReg() {
+				var regExp = /^[A-Za-z]\w{5,19}$/; //数字字母下划线
+				if(regExp.test($('#user_h').val())) { //test检测$('#user_h').val()是否符合regExp格式
+					$('#err-lgU').html('√ 检测通过').css('color', 'green');
+					return true;
+				}
+				$('#err-lgU').html('用户名由5-19个数字字母下划线组成!').css('color', 'red');
+				return false;
+
+			}
+
+			/* ******检测用户名是否存在***** */
+			function checkUserExsited() {
+				var dataJSON = {
+					"userID": $('#user_h').val(),
+				}
+				$.ajax({
+					type: 'get',
+					url: 'http://datainfo.duapp.com/shopdata/getuser.php',
+					data: dataJSON,
+					dataType: "JSONP",
+					success: function(data) {
+						console.log(data);
+						/*  *****用户名重名data返回0  没有信息可用***** */
+						if(!(data == 0)) {
+							$('#err-lgU').html("用户名已被注册!").css('color', 'red');
+						}
+						return true;
+					}
+
+				})
+			}
+
+			/* ******检测密码规则***** */
+			function checkPwReg() {
+				var level = 0;
+				var value = $('#psd').val();
+
+				if(null !== value.match(/\d/)) {
+					level++;
+				}
+				if(null !== value.match(/[a-zA-Z]/)) {
+					level++;
+				}
+				if(null !== value.match(/[^a-zA-Z0-9]/)) {
+					level++;
+				}
+
+				var levelArr = ['请输入6位以上的密码', '弱', '中', '强'];
+				$('#err-lgP').html(levelArr[level]);
+
+			}
+
+			/* ***密码确认** */
+			function checkPwConfirm() {
+				var confirmV = $('#psdc').val();
+				var pwV = $('#psd').val();
+				if(pwV !== confirmV) {
+					$('#err-lgPc').html('两次密码不一致!');
+				}
+				if(pwV === confirmV) {
+					$('#err-lgPc').html('√ 审核通过').css('color', 'green');
+				}
+
+			}
+		</script>
+	</body>
+
+</html>

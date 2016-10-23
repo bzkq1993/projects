@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!-- SEO  -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<!-- 苹果专用 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 简单移动端适配 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+		<title>模板</title>
+		<!-- 图标 -->
+		<link rel="stylesheet" href="icon/iconfont.css">
+		<link rel="stylesheet" href="css/common2.css" />
+		<style>
+			.num span {
+				font-size: 14px;
+				color: white;
+			}
+			
+			.num {
+				margin-right: 5%;
+			    margin-left: 5%;
+			    margin-top: 2%;
+			    float: left;
+			}
+			.mun{
+				float: left;
+				margin-top: 2%;
+			}
+			
+			.mun span {
+				font-size: 14px;
+				color: white;
+			}
+			
+			.sp-list {
+				width: 100%;
+				height: 7rem;
+				border-bottom: 1px solid silver;
+			}
+			
+			.sp-l {
+				width: 40%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				float: left;
+			}
+			
+			.sp-l img {
+				width: 80%;
+				height: 90%;
+			}
+			
+			.sp-c {
+				width: 45%;
+				height: 100%;
+				font-size: 0.8rem;
+				float: left;
+			}
+			
+			.sp-c p {
+				margin: 0.2rem;
+			}
+			
+			.sp-c p:first-child {
+				margin-top: 0.6rem;
+				overflow: hidden;
+				display: inline-block;
+				height: 26%;
+			}
+			
+			.sp-c p:nth-child(3) {
+				color: brown;
+			}
+			
+			.sp-c p:nth-child(4) {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			
+			.sp-c p:nth-child(4) input {
+				line-height: 15px;
+				text-align: center;
+			}
+			
+			.sp-r {
+				width: 15%;
+				height: 100%;
+				float: right;
+			}
+			
+			.sp-r-t {
+				font-size: 1.3rem;
+				margin-top: 0.8rem;
+			}
+			
+			.jia,
+			.jian {
+				width: 30px;
+				height: 20px;
+				background-color: black;
+				color: white;
+				font-size: 18px;
+				border: none;
+				text-align: center;
+				line-height: 20px;
+				border-radius: 5px;
+			}
+			
+			.Kcart {
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				display: none;	
+			}
+			
+			.Kcart p {
+				font-size: 18px;
+				margin-top: 15%;
+				margin-bottom: 5%;
+			}
+			
+			.Kcart img {
+				width: 50%;
+				height: 30%;
+				margin-bottom: 10%;
+			}
+			
+			.Kcart button {
+				width: 60%;
+				height: 8%;
+				font-size: 20px;
+				color: white;
+				border: none;
+				border-radius: 10px;
+				background-color: hotpink;
+			}
+			
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<div>
+					<span class="icon iconfont fl">&#xe705;</span>
+				</div>
+				<div>
+					<span>购物车</span>
+				</div>
+
+				<div>
+					<button class="rBtn reg2">去结算</button>
+				</div>
+			</div>
+
+		</header>
+		
+		<section>
+
+			<div class="search">
+				<div class="num">
+					<span>商品数量 : </span>
+					<span class="sll">0</span>
+				</div>
+				<div class="mun">
+					<span>应付总额(不含运费) : </span>
+					<span>¥598</span>
+				</div>
+			</div>
+
+			<div class="Kcart">
+				<p>您的购物车空空~</p>
+				<img src="img/cart.png" alt="" />
+				<button>去逛逛</button>
+			</div>
+
+			<div class="gw">
+				<!--<div class="sp-list">
+				<div class="sp-l">
+					<img src="img/s1.jpg" alt="" />
+				</div>
+				<div class="sp-c">
+					<p>ESPRIT气质V领玫红</p>
+					<p>T恤</p>
+					<p>单价 : ¥199</p>
+					<p>
+						数量  : 
+						<button class="jian">-</button>
+						<input type="number" class="shuliang" value="1"  style="width: 20px;height: 15px;"  />
+						<button class="jia">+</button>
+					</p>
+					
+				</div>
+				<div class="sp-r">
+					<div class="sp-r-t icon iconfont">&#xe62f;</div>
+					<div class="sp-r-b"></div>
+				</div>
+			</div>-->
+			</div>
+
+		</section>
+		<script src="js/jquery-1.12.1.js"></script>
+		<script type="text/javascript">
+			/* ***点击加减商品数量*** */
+			$(document).on('click tap', '.jia', function() {
+
+				var sl = parseInt($(this).prev().val());
+				sl++;
+				$(this).prev().val(sl);
+				$('.sll').html(sl);
+
+			});
+
+			$(document).on('click tap', '.jian', function() {
+				var sl = parseInt($(this).next().val());
+				sl--;
+				$(this).next().val(sl);
+				$('.sll').html(sl);
+
+			});
+
+			/* ***商品添加*** */
+			var tmpUser = sessionStorage.getItem('tmpuserID');
+			var dataJSON = {
+				userID: tmpUser,
+			}
+			console.log(tmpUser);
+
+			/* *tmpUser为空时* */
+//			if(tmpUser === null) {
+//				console.log("11");
+//				$('.search').css('display', 'none');
+//				$('.Kcart').css('display','block');
+//			} else {
+//				console.log("22");
+//				$('.Kcart').css('display', 'none');
+//			}
+
+			function cartSp() {
+				$.ajax({
+					type: "POST",
+					url: "http://datainfo.duapp.com/shopdata/getCar.php",
+					data: dataJSON,
+					dataType: "JSONP",
+					success: function(data) {
+						console.log(data);
+//						console.log(data.length);
+
+						if(tmpUser === null || data == 0) {
+							console.log("11");
+							$('.search').css('display', 'none');
+							$('.Kcart').css('display','block');
+						} else {
+								$('.Kcart').css('display', 'none');
+								$('.search').css('display', 'block');
+							
+						}
+						/* *当没有商品时* */
+//						if(data != 1) {
+//							$('.search').css('display', 'block');
+//							$('.Kcart').css('display', 'none');
+//							console.log("33");
+//						}else{
+//							$('.search').css('display', 'none');
+//							$('.Kcart').css('display', 'block');
+//							console.log("44");
+//						}
+						if(data) {
+							$('.gw').html('');
+							var tmpStr = "";
+							for(var j = 0; j < data.length; j++) {
+								tmpStr += '<div class="sp-list">';
+								tmpStr += '<div class="sp-l">';
+								tmpStr += '<img src=' + data[j].goodsListImg + '  />';
+								tmpStr += '</div>';
+								tmpStr += '<div class="sp-c">';
+								tmpStr += '<p>' + data[j].goodsName + '</p>';
+								tmpStr += '<p>' + data[j].className + '</p>';
+								tmpStr += '<p>单价 : ¥' + data[j].price + '</p>';
+								tmpStr += '<p>';
+								tmpStr += '数量  : ';
+								tmpStr += '<button class="jian">-</button>';
+								tmpStr += '<input type="number" class="shuliang" value="1"  style="width: 20px;height: 15px;"  />';
+								tmpStr += '<button class="jia">+</button>';
+								tmpStr += '</p>';
+								tmpStr += '</div>';
+								tmpStr += '<div class="sp-r">';
+								tmpStr += '<div class="sp-r-t icon iconfont" goodsid="' + data[j].goodsID + '">&#xe62f;</div>';
+								tmpStr += '<div class="sp-r-b"></div>';
+								tmpStr += '</div>';
+								tmpStr += '</div>';
+							}
+							$('.gw').html(tmpStr);
+						}
+					}
+				});
+			}
+			cartSp();
+
+			/* ****删除购物车*** */
+
+			$(document).on('click tap', '.sp-r-t', function() {
+				var gId = $(this).attr('goodsid');
+				var that = this;
+				console.log(gId);
+				console.log(tmpUser);
+				$.ajax({
+					type: "get",
+					url: "http://datainfo.duapp.com/shopdata/updatecar.php",
+					data: {
+						userID: tmpUser,
+						goodsID: gId,
+						number: 0
+					},
+					success: function(data) {
+						console.log(data);
+						if(data == 1) {
+//							alert('确认删除改商品!');
+//							window.location.href = "cart.html"; 
+
+							$(that).parent().parent().remove();
+						}
+					}
+				})
+			});
+		</script>
+	</body>
+
+</html>

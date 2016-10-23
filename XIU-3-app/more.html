@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!-- SEO  -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<!-- 苹果专用 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 简单移动端适配 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>模板</title>
+		<!-- 图标 -->
+		<link rel="stylesheet" href="icon/iconfont.css">
+		<link rel="stylesheet" href="css/common2.css" />
+		<style>
+			/* **more** */
+			
+			.s5-t {
+				margin: 1.5rem 0;
+			}
+			
+			.s5-c {
+				margin-bottom: 1.5rem;
+			}
+			
+			.stc {
+				width: 90%;
+				border: 1px solid silver;
+				margin: 0 auto;
+				border-radius: 1rem;
+			}
+			
+			.sItem {
+				width: 100%;
+				height: 2rem;
+				border-bottom: 1px solid silver;
+				line-height: 2rem;
+			}
+			
+			.sItem span:nth-child(1) {
+				font-size: 0.8rem;
+				margin-left: 0.5rem;
+			}
+			
+			.sItem span:nth-child(2) {
+				margin-right: 0.5rem;
+				color: silver;
+			}
+			
+			.stc .sItem:last-child {
+				border: none;
+			}
+			
+			.gc {
+				width: 2.5rem;
+				height: 1.3rem;
+				background-color: #dc1e5a;
+				border: none;
+				border-radius: 0.5rem;
+				margin: 0.5rem 0 0 2rem;
+				color: white;
+				font-size: 0.8rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.lg3 {
+				width: 85%;
+				height: 60%;
+				color: white;
+				border: none;
+				font-size: 0.8rem;
+				background-color: #e32e65;
+				border-radius: 0.5rem;
+				outline: none;
+			}
+			
+			.lg {
+				width: 100%;
+				height: 4rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			
+			#show-more{
+				position: absolute;
+				width: 80%;
+				height: 2.5rem;
+				background: #333333;
+				color: white;
+				top: 50%;
+				margin-left: 10%;
+				border-radius: 0.5rem;
+				opacity: 0.8;
+				z-index: 999;
+				text-align: center;
+				line-height: 2.5rem;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<div>
+					<span class="icon iconfont fl">&#xe705;</span>
+				</div>
+				<div>
+					<span>我的秀</span>
+				</div>
+				<div></div>
+			</div>
+		</header>
+		<div id="show-more">成功退出!</div>
+		<section>
+			<div class="s5-t">
+				<div class="stc">
+					<div class="sItem">
+						<span class="fl">常见问题</span>
+						<span class="icon iconfont fr">&#xe61a;</span>
+					</div>
+					<div class="sItem">
+						<span class="fl">系统设置</span>
+						<span class="icon iconfont fr">&#xe61a;</span>
+					</div>
+					<div class="sItem">
+						<span class="fl">软件更新</span>
+						<span class="icon iconfont fr">&#xe61a;</span>
+					</div>
+					<div class="sItem">
+						<span class="fl">扫描二维码</span>
+						<span class="icon iconfont fr">&#xe61a;</span>
+					</div>
+				</div>
+			</div>
+			<div class="s5-c">
+				<div class="stc">
+					<div class="sItem">
+						<span class="fl">我要提意见</span>
+						<span class="icon iconfont fr">&#xe61a;</span>
+					</div>
+					<div class="sItem">
+						<span class="fl">关于</span>
+						<span class="icon iconfont fr">&#xe61a;</span>
+					</div>
+				</div>
+			</div>
+			<div class="lg">
+				<button class="lg3 quit">退出登录</button>
+			</div>
+		</section>
+		<script src="js/jquery-1.12.1.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			/* *********退出登录*********** */
+			$(document).on('click tap','.quit', function(){
+				var tmpUser = sessionStorage.removeItem('tmpuserID');
+				console.log(tmpUser);
+				$('#show-more').show();
+				var timer2 = setTimeout(function() {
+					$("#show-more").hide();
+				},500)
+			});
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!-- SEO  -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<!-- 苹果专用 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 简单移动端适配 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>模板</title>
+		<!-- 图标 -->
+		<link rel="stylesheet" href="icon/iconfont.css">
+
+		<link rel="stylesheet" href="css/common2.css">
+		<style>
+			/* ******* login ******* */
+			
+			.login {
+				display: none;
+			}
+			
+			.register {
+				display: none;
+			}
+			
+			.lg {
+				width: 100%;
+				height: 4rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			
+			section .lg:first-child {
+				margin-top: 2rem;
+			}
+			
+			.lg input {
+				width: 85%;
+				height: 60%;
+				border: 1px solid silver;
+				border-radius: 0.5rem;
+				font-size: 1rem;
+				font-weight: 600;
+				outline: none;
+				padding-left: 0.5rem;
+			}
+			
+			.lg2 {
+				width: 100%;
+				height: 3rem;
+				color: #707070;
+			}
+			
+			.lg2-inp {
+				margin-left: 1.5rem;
+			}
+			
+			.lg2 span a {
+				color: #9d9d9d;
+				font-size: 0.8rem;
+				margin-left: 0.5rem;
+			}
+			
+			.lg3 {
+				width: 85%;
+				height: 60%;
+				color: white;
+				border: none;
+				font-size: 1.3rem;
+				background-color: #e32e65;
+				border-radius: 0.5rem;
+				outline: none;
+			}
+			
+			.btn-reg {
+				width: 15%;
+				height: 70%;
+				margin-right: 0.5rem;
+				margin-top: 0.3rem;
+				color: white;
+				background-color: #e4366b;
+				box-shadow: 0 0 1px #silver;
+				border: 1px solid silver;
+				border-radius: 0.5rem;
+			}
+			
+			.erron {
+				width: 85%;
+				height: 40%;
+				font-size: 0.6rem;
+				color: orangered;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<div>
+					<span class="icon iconfont fl" id="fhX2">&#xe705;</span>
+				</div>
+				<div>
+					<span>登录</span>
+				</div>
+				<div>
+					<button class="rBtn reg2 jc">注册</button>
+				</div>
+			</div>
+		</header>
+
+		<section>
+			<div class="lg">
+				<input type="text" id="user_l" placeholder=" &nbsp;账号" />
+				<div class="erron" id="err-u"></div>
+			</div>
+			<div class="lg">
+				<input type="password" id="psd-l" placeholder="&nbsp;密码" />
+				<div class="erron" id="err-pw"></div>
+			</div>
+			<div class="lg2">
+				<input type="radio" id="" class="lg2-inp" />
+				<label>记住密码</label>
+				<span>
+	    			<a href="#">忘记密码?</a>
+	    		</span>
+			</div>
+			<div class="lg">
+				<button class="lg3" id="lgt">登录</button>
+				<div class="erron" id="err-lg"></div>
+			</div>
+		</section>
+		<script src="js/app.js"></script>
+		<script src="js/jquery-1.12.1.js" type="text/javascript"></script>
+
+		<script>
+			/*  *****跳转转注册***** */
+			$(document).on('click','.jc',function(){
+				$('.change').load('register.html');
+			})
+//			$('.jc').click(function() {
+//				$('.change').load('register.html');
+//			});
+			$(document).on('click','#fhX2',function(){
+				$('.change').load('meXIU.html');
+			})
+
+			/*  *****登录***** */
+
+			$('#lgt').click(function() {
+				var user = $('#user_l').val();
+				var pw = $('#psd-l').val();
+				$.ajax({
+					type: 'get',
+					url: 'http://datainfo.duapp.com/shopdata/userinfo.php',
+					data: {
+						status: 'login',
+						userID: user,
+						password: pw
+					},
+					success: function(data) {
+						console.log(data);
+						if(data == 0) {
+							$('#err-lg').html("用户名存在!");
+						}
+						if(data == 2) {
+							$('#err-lg').html("密码与用户名不符合!!");
+						}
+						var tmpData = JSON.parse(data);
+						//						console.log(tmpData.userID);
+						if(user === tmpData.userID) {
+							//							alert('登录成功!' + user + '欢迎你!')
+
+							var tmpuserID = tmpData.userID;
+							console.log(user === tmpData.userID);
+							sessionStorage.setItem('tmpuserID', tmpuserID);
+							window.location.href = "footer.html";
+						}
+
+					}
+
+				})
+			})
+
+			/*  *****光标获取时清除#err-u #err-pw**** */
+
+			$('#user_l').focus(function() {
+				$('#user_l').val('');
+				$('#err-lg').html('');
+			});
+			$('#psd-l').focus(function() {
+				$('#psd-l').val('');
+			})
+		</script>
+	</body>
+
+</html>

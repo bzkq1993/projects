@@ -1,0 +1,284 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+input,
+button {
+	outline: none;
+}
+
+
+/*隐藏滚动条*/
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+
+/* ***header*** */
+
+header {
+	width: 100%;
+	height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+/*logo*/
+
+.logo {
+	width: 100%;
+	height: 100%;
+	background-color: #e4366b;
+	display: flex;
+}
+
+.logo {
+	width: 100%;
+	height: 45px;
+	background-color: #e4366b;
+	display: flex;
+}
+
+.logo div {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo div:nth-child(2) {
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 900;
+	flex: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo .icon {
+	font-size: 1rem;
+	color: #52525a;
+}
+
+.logoS {
+	margin-right: 0.5rem;
+}
+
+.logo .user-h {
+	width: 100%;
+	height: 100%;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 0.6rem;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.rBtn {
+	width: 90%;
+	height: 70%;
+	color: white;
+	background-color: #e4366b;
+	box-shadow: 0 0 1px #silver;
+	border: 1px solid silver;
+	border-radius: 0.5rem;
+}
+
+
+/* ******* section ******* */
+
+section {
+	width: 100%;
+	position: absolute;
+	top: 45px;
+	bottom: 50px;
+	background-color: #f7f7f7;
+	overflow-y: auto;
+}
+
+.search {
+	width: 100%;
+	height: 55px;
+	background-color: #333333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* ******* pageOne ******* */
+
+.pageOne {
+	width: 100%;
+	height: 100%;
+}
+
+.oc {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.oc img {
+	border: 1px solid silver;
+	width: 80%;
+	height: 80%;
+}
+
+.ob {
+	width: 100%;
+	height: 28%;
+}
+
+.ob1 {
+	width: 100%;
+	height: 40%;
+	background: url(../img/prc.gif) no-repeat 0 center;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.obp {
+	width: 80%;
+	height: 100%;
+	/*	background: url(../img/prc.gif) no-repeat 0 center;*/
+	color: white;
+	font-size: 1rem;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ob2 {
+	width: 100%;
+	height: 60%;
+	font-size: 0.8rem;
+	color: silver;
+	clear: both;
+	margin-top: 1rem;
+}
+
+.ob2 div:first-child {
+	margin: 0 2rem;
+}
+
+.scj {
+	text-decoration: line-through;
+}
+
+
+/* ******* pageTwo ******* */
+
+.pageTwo {
+	width: 100%;
+	height: 100%;
+}
+
+.xq2s {
+	width: 100%;
+	height: 40%;
+}
+
+.xq2s img {
+	width: 100%;
+	height: 100%;
+}
+
+.xq2x {
+	width: 100%;
+	height: 60%;
+	font-size: 0.8rem;
+	color: silver;
+	margin-top: 1rem;
+}
+
+.pageThree img {
+	width: 100%;
+	height: 100%;
+}
+
+.detaill {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	/*position: absolute;
+		bottom: 50px;
+		top:0;*/
+}
+
+.onew {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 50px;
+}
+
+.pageThree {
+	width: 100%;
+	height: 100%;
+}
+
+.pageThree .swiper-container-horizontal>.swiper-pagination-bullets {
+	bottom: 50px;
+}
+
+.banner2 {
+	position: absolute;
+	top: 0;
+	bottom: 50px;
+}
+
+.paginationCont {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	bottom: 0;
+	background-color: #4c4c54;
+}
+
+.paginationCont .cusClass {
+	width: 33%;
+	height: 50px;
+	border-radius: 0;
+	border-right: 1px solid #333333;
+	color: white;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 50px;
+	opacity: 1;
+	background-color: #4c4c54;
+}
+
+.paginationCont .swiper-pagination-bullet-active {
+	background-color: #4c4c54;
+	border-top: 2px solid red;
+}
