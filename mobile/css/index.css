@@ -1,0 +1,443 @@
+html,body,p {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+a {
+	text-decoration: none;
+	color: #898989;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+html{
+	font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+}
+
+/*隐藏滚动条*/
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/***header***/
+
+header{
+	width: 100%;
+	height: 45px;
+}
+
+.logo{
+	width: 26%;
+	height: 100%;
+}
+.logo img{
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 82%;
+	height: 55%;
+}
+.slogan{
+	width: 40%;
+	height: 100%;
+}
+.slogan img{
+	display: block;
+    padding-top: 14px;
+    width: 75%;
+    height: 36%;
+    margin: auto;
+}
+
+/***section***/
+section{
+	width: 100%;
+	background-color: #fafafa;
+}
+.banner img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.main{
+	width: 100%;
+}
+.main-H{
+	width: 100%;
+	height: 50px;
+	background-color: #ffffff;
+	display: flex;
+	border-top: 10px solid #e5e5e5;
+}
+.main-H .main-H1{
+	margin-top: 20px;
+	flex: 1;
+	font-size: 16px;
+	color: #333333;
+	text-align: center;
+}
+.main-H1 span{
+	  margin-left: -54px;
+}
+.main-H1 e{
+	margin-left: -38px;
+}
+
+.main-S{
+	height: 120px;
+    padding: 0.5rem 0.5rem;
+    font-size: 12px;
+    line-height: 2;
+    color: #666666;
+    border-bottom: 10px solid #e5e5e5;
+    background: #f5f5f5;
+}
+.xm{
+	width: 100%;
+	height: 160px;
+	display: flex;
+	text-align: center;
+}
+.xmL{
+	flex: 1;
+}
+.xmS-r{
+	width: 1px;
+    height: 90px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    background-color: #e5e5e5;
+}
+
+
+.xmS,
+.xmB {
+	width: 99%;
+	height: 150px;
+}
+.xmX,
+.xmB {
+	width: 100%;
+	height: 115px;
+}
+.xmS p:first-child,
+.xmB p:first-child {
+	padding: 15px 0 10px 0;
+	height: 0.8rem;
+	font-size: 0.8rem;
+	color: #333333;
+}
+.xmS p:nth-of-type(2),
+.xmB p:nth-of-type(2) {
+	height: 1rem;
+	font-size: 1rem;
+	color: #ff3300;
+	padding-bottom: 10px;
+}
+.xmS img,
+.xmB img {
+	width: 83px;
+	height: 68px;
+}
+
+.xmX li,
+.xmB li {
+	font-size: 0.5rem;
+	text-align: left;
+	padding: 0 15px;
+	line-height: 0.8rem;
+}
+.xmB{
+	flex: 1;
+}
+
+.ln{
+	width: 100%;
+	height: 158px;
+	text-align: center;
+}
+.ln p:first-child{
+	font-size: 0.7rem;
+	color: #666;
+	height: 1.2rem;
+	padding: 0.5rem 0 0.2rem 00;
+}
+.ln p:nth-of-type(2){
+	font-size: 0.6rem;
+	color: #666;
+	height: 1.1rem;
+}
+.lnP{
+	text-indent: 2em;
+    font-size: 12px;
+    color: #666666;
+    text-align: left;
+    margin: 0 auto;
+    padding: 2%;
+    line-height: 1rem;
+    background-color: #f5f5f5;
+}
+
+.teamB{
+	width: 100%;
+    height: 278px;
+    color: #FFFFFF;
+    text-align: center;
+    background: url(../img/team.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+.teamB img{
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	display: block;
+	margin: 0.3rem auto;
+	padding-top: 7px;
+}
+.teamB-box{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.slide1 p:first-of-type{
+	font-size: 14px;
+	padding: 0.2rem 0;
+	height: 0.75rem;
+}
+.slide1 p:nth-of-type(2),
+.slide1 p:nth-of-type(3) {
+	font-size: 12px;
+	padding: 0.1rem 0;
+	height: 0.6rem;
+}
+.slide1 p:nth-of-type(3){
+	display: block;
+    width: 53%;
+    text-align: left;
+    margin: 0 auto;
+}
+.s1{
+	text-align: center!important;
+}
+.sliderCont2{
+	width: 100%;
+	text-align: center;
+}
+.twoL{
+	width: 50%;
+	height: 250px;
+}
+.twoR{
+	width: 50%;
+	height: 250px;
+}
+.pic{
+	width: 60%;
+	height: 44%;
+}
+.slide2 img{
+	width: 112px;
+    height: 112px;
+    display: block;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.slide2 p:first-of-type{
+	font-size: 16px;
+    color: #333333;
+    height: 0.75rem;
+    padding: 0.3rem 0;
+}
+
+.slide2 p:nth-of-type(2){
+	max-width: 399px;
+    font-size: 12px;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    color: #737373;
+    text-align: left;
+    display: block;
+    margin: 0 auto;
+}
+.ct{
+	text-align: center!important;
+}
+.newsB{
+	width: 100%;
+	height: 300px;
+}
+
+.slide3 img{
+	display: block;
+	width: 90%;
+	max-width: 495px;
+	height: 220px;
+	margin: 0 auto;
+}
+
+.slide3 p:first-of-type{
+	font-size: 12px;
+    line-height: 1rem;
+	display: block;
+	width: 90%;
+	max-width: 459px;
+	height: 40px;
+	margin: 0 auto;
+	color: #666;
+	text-align: center;
+	padding-top: 5px;
+}
+.slide3 p:nth-of-type(2){
+	font-size: 0.4rem;
+    color: #999999;
+    height: 0.6rem;
+    width: 100%;
+    max-width: 495px;
+    display: block;
+    text-align: right;
+    margin: 0 auto;
+    width: 90%;
+}
+.swiper-container .swiper-pagination-bullets{
+	bottom: 0!important;
+}
+
+.contactB{
+	width: 100%;
+	height: 100%;
+	min-height: 120px;
+	background: url(../img/contact.jpg) no-repeat center;
+	background-size: 100%;
+}
+
+.contactL{
+	width: 55%;
+    height: 100%;
+    min-height: 126px;
+    box-sizing: border-box;
+}
+.contactL p{
+	font-size: 0.5rem;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 0 0 0 0.4rem;
+    line-height: 1rem;
+}
+.contactL-box{
+	width: 100%;
+    height: 100%;
+    max-width: 207px;
+    max-height: 105px;
+    margin: auto;
+    padding: 1.6rem 0;
+    box-sizing: border-box;
+}
+.contactR{
+	width: 45%;
+	height: 100%;
+	min-height: 120px;
+}
+.contactR img{
+	width: 3rem;
+    height: 3rem;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 0 0.2rem 0;
+}
+.contactR p{
+	font-size: 0.3rem;
+	color: #FFFFFF;
+	text-align: center;
+}
+.mH1{
+	text-align: right!important;
+}
+
+/***footer***/
+footer{
+	width: 100%;
+	height: 2rem;
+	font-size: 0.5rem;
+	text-align: center;
+	background-color: #333333;
+}
+.ft1{
+	height: 0.5rem;
+	color: #cccccc;
+	padding: 0.3rem 0 0.4rem 0;
+}
+.ft2{
+	font-size: 0.4rem;
+	height: 0.5rem;
+	color: #999999;
+}
+.noB{
+	border: none;
+}
+
+@media screen and (max-width: 330px) {
+	.main-S{
+		height: 145px;
+	}
+	.contactB,
+	.contactL,
+	.contactR {
+		min-height: 100px;
+	}
+	.newsB {
+		height: 207px;
+	}
+	.slide3 img{
+		height: 127px;
+	}
+	.contactL-box {
+		max-height: 99px;
+	}
+	
+}
+/* 判断ipad */
+@media screen and (min-width: 700px) {
+	/* style */
+	header{
+		height: 75px;
+	}
+	.logo img{
+		margin-top: 18px;
+	}
+	.slogan img{
+		padding-top: 24px;
+	}
+	.main-S{
+		height: 80px;
+	}
+	.lnP{
+		padding: 5px;
+	}
+	.teamB{
+		height: 305px;
+	}
+	.slide1 p:nth-of-type(3),
+	.slide2 p:nth-of-type(2) {
+		text-align: center;
+	}
+	.contactB {
+		min-height: 140px;
+	}
+	
+}
